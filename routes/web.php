@@ -49,8 +49,8 @@ Route::get('/public/galeri/{id}/comments', [GaleriController::class, 'getComment
 Route::get('/public/galeri/{id}/download', [GaleriController::class, 'download'])->name('galeri.download');
 
 // Content update routes (admin only)
-Route::post('/public/agenda/update', [ContentController::class, 'updateAgenda'])->name('agenda.update');
-Route::post('/public/informasi/update', [ContentController::class, 'updateInformasi'])->name('informasi.update');
+Route::post('/public/agenda/update', [ContentController::class, 'updateAgenda'])->name('agenda.update.public');
+Route::post('/public/informasi/update', [ContentController::class, 'updateInformasi'])->name('informasi.update.public');
 Route::post('/public/informasi/jurusan/add', [ContentController::class, 'addJurusan'])->name('informasi.jurusan.add');
 Route::delete('/public/informasi/jurusan/{id}', [ContentController::class, 'deleteJurusan'])->name('informasi.jurusan.delete');
 Route::post('/public/informasi/akreditasi/add', [ContentController::class, 'addAkreditasi'])->name('informasi.akreditasi.add');
